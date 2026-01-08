@@ -26,7 +26,7 @@
 <body>
 
 <div class="container">
-    <h1>🎨 色彩學模擬測驗</h1>
+    <h1>🎨 電腦繪圖試題模擬測驗</h1>
     <p class="info">全隨機模式：題目隨機抽出 50 題，每題選項順序亦隨機排列</p>
     
     <div id="quiz-form"></div>
@@ -198,7 +198,7 @@ function calculateScore() {
     resultDiv.style.display = 'block';
     resultDiv.className = score >= 60 ? 'pass' : 'fail';
     
-    let msg = score >= 80 ? '🎉 恭喜及格！' : '💪 還差一點，再練習看看！';
+    let msg = score >= 100 ? '🎉 恭喜及格！' : '💪 還差一點，再練習看看！';
     resultDiv.innerHTML = `<h2>測驗得分：${score} 分</h2><p>${msg}</p>`;
     
     document.getElementById('retry-btn').style.display = 'block';
@@ -208,5 +208,6 @@ function calculateScore() {
 
 </body>
 </html>
+
 
 
