@@ -27,7 +27,7 @@
 
 <div class="container">
     <h1>🎨 色彩學模擬測驗</h1>
-    <p class="info">全隨機模式：題目隨機抽出 25 題，每題選項順序亦隨機排列</p>
+    <p class="info">全隨機模式：題目隨機抽出 50 題，每題選項順序亦隨機排列</p>
     
     <div id="quiz-form"></div>
     
@@ -152,7 +152,7 @@ function shuffle(array) {
 }
 
 // 準備測驗題目
-const selectedQuestions = shuffle([...fullBank]).slice(0, 25);
+const selectedQuestions = shuffle([...fullBank]).slice(0, 50);
 const formContainer = document.getElementById('quiz-form');
 
 // 渲染題目與隨機選項
@@ -198,7 +198,7 @@ function calculateScore() {
     resultDiv.style.display = 'block';
     resultDiv.className = score >= 60 ? 'pass' : 'fail';
     
-    let msg = score >= 60 ? '🎉 恭喜及格！' : '💪 還差一點，再練習看看！';
+    let msg = score >= 80 ? '🎉 恭喜及格！' : '💪 還差一點，再練習看看！';
     resultDiv.innerHTML = `<h2>測驗得分：${score} 分</h2><p>${msg}</p>`;
     
     document.getElementById('retry-btn').style.display = 'block';
@@ -208,4 +208,5 @@ function calculateScore() {
 
 </body>
 </html>
+
 
