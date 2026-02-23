@@ -186,7 +186,7 @@ function calculateScore() {
             ansDiv.style.display = 'block';
             ansDiv.innerHTML = `⚠️ 未作答！正確答案是：${item.a}`;
         } else if (selected.value === item.a) {
-            score += 4;
+            score += 2;
             ansDiv.style.display = 'none';
         } else {
             ansDiv.style.display = 'block';
@@ -196,7 +196,7 @@ function calculateScore() {
 
     const resultDiv = document.getElementById('result');
     resultDiv.style.display = 'block';
-    resultDiv.className = score >= 60 ? 'pass' : 'fail';
+    resultDiv.className = score >= 100 ? 'pass' : 'fail';
     
     let msg = score >= 100 ? '🎉 恭喜及格！' : '💪 還差一點，再練習看看！';
     resultDiv.innerHTML = `<h2>測驗得分：${score} 分</h2><p>${msg}</p>`;
@@ -208,6 +208,7 @@ function calculateScore() {
 
 </body>
 </html>
+
 
 
 
